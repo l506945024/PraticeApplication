@@ -9,7 +9,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lq.example.R;
-
+/**
+ *description:
+ * 
+ *@author:mick
+ *@date:2018/11/16
+ */
 public class TestLiveDataActivity extends AppCompatActivity {
     TextView tv_show;
     private UserInfModel mUserInfModel;
