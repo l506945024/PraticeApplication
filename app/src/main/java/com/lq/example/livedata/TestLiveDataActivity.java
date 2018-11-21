@@ -2,6 +2,7 @@ package com.lq.example.livedata;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.graphics.Bitmap;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,6 +42,8 @@ public class TestLiveDataActivity extends AppCompatActivity {
                 tv_show.setText(s);
             }
         });
+
+//        Bitmap
 
     }
 
