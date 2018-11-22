@@ -25,13 +25,13 @@ android {
         flavorTest{
             dimension 'tester'
             resValue("string", "app_name", "豆蕊米开发版")
-            buildConfigField("String","serviceIp",SERVICE_IP_CUSTOM+";")
+            buildConfigField("String","serviceIp","\"+$SERVICE_IP_CUSTOM+\"")
         }
 
         flavorProduct{
             dimension 'tester'
             resValue("string", "app_name", "豆蕊米正式版")
-            buildConfigField("String","serviceIp",SERVICE_IP_CUSTOM+";")
+            buildConfigField("String","serviceIp","\"+$SERVICE_IP_CUSTOM+\"")
         }
     }
 
