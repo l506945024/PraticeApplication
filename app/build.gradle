@@ -18,8 +18,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    aaptOptions.cruncherEnabled = false
-    aaptOptions.useNewCruncher = false
+
+
+    flavorDimensions('tester')
+    productFlavors{
+        flavorTest{
+            dimension 'tester'
+            resValue("string", "app_name", "豆蕊米开发版")
+            buildConfigField("String","serviceIp",SERVICE_IP_CUSTOM)
+        }
+
+        flavorTest{
+            dimension 'tester'
+            resValue("string", "app_name", "豆蕊米正式版")
+            buildConfigField("String","serviceIp",SERVICE_IP_CUSTOM)
+        }
+    }
+
+    //配置打包生成apk名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "app-${variant.flavorName}-release-v${variant.versionName}.apk"
+        }
+    }
+
 }
 
 dependencies {
